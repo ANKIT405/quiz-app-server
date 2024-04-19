@@ -47,6 +47,10 @@ let Option_set = [
   ["lodash", "express", "axios", "fs"],
 ]; // fs
 
+app.route("/check").get((req,res)=>{
+    res.send("Quiz-App-Server")
+})
+
 app.route("/").get((req, res) => {
   let Question_no = Question_set[req.query.question];
   let Options = Option_set[req.query.question];
